@@ -11,17 +11,17 @@ func TestNextToken(t *testing.T) {
 
 	tests := []struct {
 		expectedType    token.TokenType
-		expectedLiteral token.TokenLiteral
+		expectedLiteral string
 	}{
-		{token.ASSIGN, token.TokenLiteral("=")},
-		{token.PLUS, token.TokenLiteral("+")},
-		{token.LPAREN, token.TokenLiteral("(")},
-		{token.RPAREN, token.TokenLiteral(")")},
-		{token.LBRACE, token.TokenLiteral("{")},
-		{token.RBRACE, token.TokenLiteral("}")},
-		{token.COMMA, token.TokenLiteral(",")},
-		{token.SEMICOLON, token.TokenLiteral(";")},
-		{token.EOF, token.TokenLiteral("")},
+		{token.ASSIGN, "="},
+		{token.PLUS, "+"},
+		{token.LPAREN, "("},
+		{token.RPAREN, ")"},
+		{token.LBRACE, "{"},
+		{token.RBRACE, "}"},
+		{token.COMMA, ","},
+		{token.SEMICOLON, ";"},
+		{token.EOF, ""},
 	}
 
 	l := New(input)
