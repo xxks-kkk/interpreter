@@ -45,7 +45,7 @@ func testLetStatement(t *testing.T, s ast.Statement, name string) bool {
 		t.Errorf("s.TokenLiteral not 'let'. got=%q", s.TokenLiteral())
 		return false
 	}
-	letStmt, ok := s.(*ast.LetStatement)
+	letStmt, ok := s.(*ast.LetStatement) // type assertion (p.205)
 	if !ok {
 		t.Errorf("s not *ast.LetStatement. got=%T", s)
 		return false
